@@ -26,8 +26,12 @@ public class SimpleBlockingQueueTest {
         Thread consumer = new Thread(
                 () -> {
                     System.out.println(Thread.currentThread().getName() + " started");
-                    queue.poll();
-                    queue.poll();
+                    try {
+                        queue.poll();
+                        queue.poll();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 },
                 "Consumer"
         );

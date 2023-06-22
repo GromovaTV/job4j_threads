@@ -2,7 +2,6 @@ package ru.job4j.concurrent.wait;
 
 import net.jcip.annotations.GuardedBy;
 import net.jcip.annotations.ThreadSafe;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -34,17 +33,14 @@ public class SimpleBlockingQueue<T> {
 
     }
 
-    public synchronized T poll() {
+    public synchronized T poll() throws InterruptedException {
         while (queue.size() == 0) {
-            try {
-                this.wait();
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
+            this.wait();
         }
         var res = queue.poll();
         this.notifyAll();
         System.out.println("Извлечен элемент: " + res);
         return res;
     }
+
 }
