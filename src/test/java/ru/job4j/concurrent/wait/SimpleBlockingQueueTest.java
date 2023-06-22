@@ -44,5 +44,4 @@ public class SimpleBlockingQueueTest {
         System.out.println(queue.getQueue());
         assertEquals(exp, res);
     }
-
 }
