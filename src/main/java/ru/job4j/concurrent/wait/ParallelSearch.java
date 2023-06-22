@@ -29,8 +29,6 @@ public class ParallelSearch {
         );
         consumer.start();
         producer.join();
-        if (!producer.isAlive()) {
-            consumer.interrupt();
-        }
+        consumer.interrupt();
     }
 }

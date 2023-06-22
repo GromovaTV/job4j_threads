@@ -42,4 +42,8 @@ public class SimpleBlockingQueue<T> {
         System.out.println("Извлечен элемент: " + res);
         return res;
     }
+
+    public boolean isEmpty() {
+        return queue.isEmpty();
+    }
 }
