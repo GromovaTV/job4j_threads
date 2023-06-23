@@ -37,9 +37,7 @@ public class ThreadPool {
             while (!Thread.currentThread().isInterrupted()) {
                 if (tasks.isEmpty()) {
                     try {
-                        synchronized (this) {
-                            this.wait();
-                        }
+                        this.wait();
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
                     }
