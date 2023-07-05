@@ -1,2 +1,2 @@
 # Job4j. Threads.
-Test branch for task 124176.
+Создание ветки из IDEA.
