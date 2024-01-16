@@ -1,6 +1,7 @@
 package ru.job4j.concurrent.wait;
 
 public class ParallelSearch {
+
     public static void main(String[] args) throws InterruptedException {
         SimpleBlockingQueue<Integer> queue = new SimpleBlockingQueue<>(3);
         Thread producer  = new Thread(

@@ -1,7 +1,9 @@
 package ru.job4j.commonsrc;
 
 public class Flag {
+
     private static volatile boolean flag = true;
+
     public static void main(String[] args) throws InterruptedException {
         Thread thread = new Thread(
                 () -> {

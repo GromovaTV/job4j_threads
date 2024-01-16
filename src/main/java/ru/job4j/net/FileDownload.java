@@ -1,9 +1,12 @@
 package ru.job4j.net;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.URL;
 
 public class FileDownload {
+
     public static void main(String[] args) throws Exception {
         String file = "https://raw.githubusercontent.com/peterarsentev/course_test/master/pom.xml";
         try (BufferedInputStream in = new BufferedInputStream(new URL(file).openStream());

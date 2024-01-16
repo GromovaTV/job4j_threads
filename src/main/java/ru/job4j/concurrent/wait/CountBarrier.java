@@ -1,6 +1,7 @@
 package ru.job4j.concurrent.wait;
 
 public class CountBarrier {
+
     private final Object monitor = this;
     private final int total;
     private int count = 0;

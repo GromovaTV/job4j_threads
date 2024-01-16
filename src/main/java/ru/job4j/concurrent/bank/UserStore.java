@@ -7,6 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @ThreadSafe
 public class UserStore {
+
     @GuardedBy("this")
     private final ConcurrentHashMap<Integer, User> store = new ConcurrentHashMap<>();
 

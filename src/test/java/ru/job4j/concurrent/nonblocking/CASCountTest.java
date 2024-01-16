@@ -1,10 +1,12 @@
 package ru.job4j.concurrent.nonblocking;
 
 import org.junit.Test;
+
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class CASCountTest {
+
     @Test
     public void whenExecute2ThreadThen2() throws InterruptedException {
         CASCount casc = new CASCount();

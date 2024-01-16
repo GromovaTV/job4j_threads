@@ -1,6 +1,7 @@
 package ru.job4j.concurrent.wait;
 
 public class MultiUser {
+
     public static void main(String[] args) {
         Barrier barrier = new Barrier();
         Thread master = new Thread(

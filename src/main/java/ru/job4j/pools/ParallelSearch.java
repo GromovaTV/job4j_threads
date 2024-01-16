@@ -3,13 +3,12 @@ package ru.job4j.pools;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
-
 public class ParallelSearch<T> extends RecursiveTask<Integer> {
+
     private final T[] array;
     private final int from;
     private final int to;
     private final T value;
-
 
     public ParallelSearch(T[] array, int from, int to, T value) {
         this.array = array;

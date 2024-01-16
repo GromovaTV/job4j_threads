@@ -1,6 +1,7 @@
 package ru.job4j.concurrent.wait;
 
 public class Barrier {
+
     private boolean flag = false;
     private final Object monitor = this;
 
