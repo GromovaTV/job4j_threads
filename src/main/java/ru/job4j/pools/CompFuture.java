@@ -7,6 +7,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 public class CompFuture {
+
     private static void iWork() throws InterruptedException {
         int count = 0;
         while (count < 10) {
@@ -129,6 +130,7 @@ public class CompFuture {
             return name + ", моет руки";
         });
     }
+
     public static void anyOfExample() throws Exception {
         CompletableFuture<Object> first = CompletableFuture.anyOf(
                 whoWashHands("Папа"), whoWashHands("Мама"),
@@ -138,6 +140,7 @@ public class CompFuture {
         TimeUnit.SECONDS.sleep(1);
         System.out.println(first.get());
     }
+
     public static int[] asyncSum(int[][] matrix) throws ExecutionException, InterruptedException {
         int n = matrix.length;
         int[] sums = new int[2 * n];
@@ -156,6 +159,7 @@ public class CompFuture {
         }
         return sums;
     }
+
     public static CompletableFuture<Integer> getTask(int[][] data, int startRow, int endRow, int startCol) {
         return CompletableFuture.supplyAsync(() -> {
             int sum = 0;

@@ -1,4 +1,5 @@
 package ru.job4j.synch;
+
 import net.jcip.annotations.GuardedBy;
 import net.jcip.annotations.ThreadSafe;
 
@@ -8,6 +9,7 @@ import java.util.List;
 
 @ThreadSafe
 public class SingleLockList<T> implements Iterable<T>, Cloneable {
+
     @GuardedBy("this")
     private final List<T> list;
 

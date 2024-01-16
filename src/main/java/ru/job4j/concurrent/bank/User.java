@@ -5,6 +5,7 @@ import net.jcip.annotations.ThreadSafe;
 
 @ThreadSafe
 public class User {
+
     private int id;
 
     @GuardedBy("this")

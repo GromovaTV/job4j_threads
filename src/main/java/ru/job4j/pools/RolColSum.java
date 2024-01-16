@@ -4,9 +4,12 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 public class RolColSum {
+
     public static class Sums {
+
         private int rowSum;
         private int colSum;
+
         public Sums() {
         }
 
@@ -68,6 +71,5 @@ public class RolColSum {
             return sums;
         });
     }
-
 }
 

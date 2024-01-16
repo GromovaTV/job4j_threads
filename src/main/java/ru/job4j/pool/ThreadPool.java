@@ -1,10 +1,12 @@
 package ru.job4j.pool;
 
 import ru.job4j.concurrent.wait.SimpleBlockingQueue;
+
 import java.util.LinkedList;
 import java.util.List;
 
 public class ThreadPool {
+
     private final List<Thread> threads = new LinkedList<>();
     private final SimpleBlockingQueue<Runnable> tasks = new SimpleBlockingQueue<>(100);
 
@@ -26,6 +28,7 @@ public class ThreadPool {
     }
 
     static class ThreadWithQueue extends Thread {
+
         private final SimpleBlockingQueue<Runnable> tasks;
 
         public ThreadWithQueue(SimpleBlockingQueue<Runnable> tasks) {

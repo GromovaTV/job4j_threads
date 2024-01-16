@@ -1,10 +1,9 @@
 package ru.job4j.cache;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class CacheTest {
 
@@ -17,7 +16,7 @@ public class CacheTest {
     }
 
     @Test
-    public void WhenUpdate() {
+    public void whenUpdate() {
         Cache cache = new Cache();
         Base base = new Base(1, 0);
         Base newBase = new Base(1, 0);
@@ -27,7 +26,7 @@ public class CacheTest {
     }
 
     @Test
-    public void WhenDelete() {
+    public void whenDelete() {
         Cache cache = new Cache();
         Base base = new Base(1, 0);
         cache.add(base);
@@ -36,7 +35,7 @@ public class CacheTest {
     }
 
     @Test(expected = OptimisticException.class)
-    public void WhenUpdateThenException() {
+    public void whenUpdateThenException() {
         Cache cache = new Cache();
         Base base = new Base(1, 0);
         Base newBase = new Base(1, 1);

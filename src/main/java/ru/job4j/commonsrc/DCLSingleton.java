@@ -1,6 +1,7 @@
 package ru.job4j.commonsrc;
 
 public class DCLSingleton {
+
     private static volatile DCLSingleton inst;
 
     public static DCLSingleton instOf() {

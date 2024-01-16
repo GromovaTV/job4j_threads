@@ -1,6 +1,7 @@
 package ru.job4j.email;
 
 public class User {
+
     private final String username;
     private final String email;
 

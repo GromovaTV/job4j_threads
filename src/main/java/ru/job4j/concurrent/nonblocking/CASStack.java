@@ -5,7 +5,9 @@ import java.util.concurrent.atomic.AtomicReference;
 
 @ThreadSafe
 public class CASStack<T> {
+
     private final AtomicReference<Node<T>> head = new AtomicReference<>();
+
     public void push(T value) {
         Node<T> temp = new Node<>(value);
         Node<T> ref;
@@ -30,8 +32,10 @@ public class CASStack<T> {
     }
 
     private static final class Node<T> {
+
         final T value;
         Node<T> next;
+
         public Node(final T value) {
             this.value = value;
         }
